@@ -22,6 +22,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/category/:category" element={<Category />} />
+          {/* Slug is a part of the URL which explains the page's content in user-friendly terms  */}
           <Route path="/articles/:slug" element={<Article />} />
         </Routes>
       </main>

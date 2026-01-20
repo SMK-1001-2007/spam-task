@@ -4,6 +4,7 @@ import { articles } from "../data/articles"
 const Category = () => {
   const { category } = useParams()
 
+  // Gets the filtered article list which are of the specified category.
   const filtered = articles.filter(
     a => a.category === category
   )

@@ -3,6 +3,7 @@ import { articles } from "../data/articles"
 import { autoLinkContent } from "../utils/autoLinkContent";
 
 const Article = () => {
+  // short user-friendly description of the article present in the url
   const { slug } = useParams()
 
   const article = articles.find(a => a.slug === slug)
@@ -19,7 +20,7 @@ const Article = () => {
     <div className="min-h-screen">
       <div className="max-w-3xl mx-auto px-4 py-12">
 
-        {/* Breadcrumb */}
+        {/* Breadcrumb - allows users to navigate to the previous page in the hierarchial order */}
         <div className="mb-4 text-sm text-gray-500">
           <Link
             to={`/category/${article.category}`}
